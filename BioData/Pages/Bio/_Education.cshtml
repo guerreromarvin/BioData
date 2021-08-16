@@ -1,0 +1,42 @@
+﻿@model BioData.Pages.Bio._EducationModel
+@{
+}
+
+<div>
+    <div>
+        <div v-for="(edu,ndex) in education">
+            <div class="row g-3">
+                <div class="col-sm-7">
+                    <input class="form-control" v-bind:name="'educline_' + ndex + '.Institution'" type="text" v-model="edu.Institution" placeholder="Institution" />
+                </div>
+                <div class="col-sm-5">
+                    <input class="form-control" name="educline.Location" type="text" v-model="edu.Location" placeholder="Location" />
+                </div>
+                <div class="col-sm-4">
+                    <input class="form-control" name="educline.Course" type="text" v-model="edu.Course" placeholder="Course" />
+                </div>
+                <div class="col-sm-1">
+                    <label>From</label>
+                </div>
+                <div class="col-sm-1">
+                    <input class="form-control" style="width:60px;" name="edu.MonthCompletedFrom" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedFrom" placeholder="MM" />
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" style="width:90px;" name="edu.YearCompletedFrom" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedFrom" placeholder="YYYY" />
+                </div>
+
+                <div class="col-sm-1">
+                    <label>To</label>
+                </div>
+                <div class="col-sm-1">
+                    <input class="form-control" style="width:60px;" name="edu.MonthCompletedTo" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedTo" placeholder="MM" />
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" style="width:90px;" name="edu.YearCompletedTo" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedTo" placeholder="YYYY" />
+                </div>
+            </div>
+            <hr />
+        </div>
+        <button class="btn" type="button">Add</button>
+    </div>
+</div>

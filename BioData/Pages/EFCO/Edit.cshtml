@@ -1,0 +1,60 @@
+﻿@page
+@model BioData.Pages.EFCO.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PersonModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PersonModel.Id" />
+            <div class="form-group">
+                <label asp-for="PersonModel.FullName" class="control-label"></label>
+                <input asp-for="PersonModel.FullName" class="form-control" />
+                <span asp-validation-for="PersonModel.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.Address" class="control-label"></label>
+                <input asp-for="PersonModel.Address" class="form-control" />
+                <span asp-validation-for="PersonModel.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.ContactInfo" class="control-label"></label>
+                <input asp-for="PersonModel.ContactInfo" class="form-control" />
+                <span asp-validation-for="PersonModel.ContactInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.SocialInfo" class="control-label"></label>
+                <input asp-for="PersonModel.SocialInfo" class="form-control" />
+                <span asp-validation-for="PersonModel.SocialInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.WorkHistory" class="control-label"></label>
+                <input asp-for="PersonModel.WorkHistory" class="form-control" />
+                <span asp-validation-for="PersonModel.WorkHistory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonModel.Education" class="control-label"></label>
+                <input asp-for="PersonModel.Education" class="form-control" />
+                <span asp-validation-for="PersonModel.Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

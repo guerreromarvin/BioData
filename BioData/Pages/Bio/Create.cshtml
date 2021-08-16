@@ -1,0 +1,51 @@
+﻿@page
+@model BioData.Pages.Bio.CreateModel
+@{
+}
+
+<style>
+
+    .dataentry label {
+        width: 120px;
+    }
+
+    .dataentry input {
+        width: 320px;
+    }
+</style>
+<div>
+    <form method="post">
+        <div>
+            <label style="font-size:40px;">BIO-DATA</label>
+        </div>
+        <hr />
+        <div class="dataentry">
+            <div>
+                <label>Name :</label>
+                <input name="FullName" type="text" asp-for="PersonData.FullName" autocomplete="off"/>
+                <input name="PersonId" type="hidden" asp-for="PersonData.Id" />
+            </div>
+            <div>
+                <label>Address :</label>
+                <input name="Address" type="text"  asp-for="PersonData.Address"  autocomplete="off" />
+            </div>
+            <div>
+                <label>Work History :</label>
+                <input name="WorkHistory" type="text" asp-for="PersonData.WorkHistory"  autocomplete="off" />
+            </div>
+            <div>
+                <label>Education :</label>
+                <input name="Education" type="text" asp-for="PersonData.Education"  autocomplete="off" />
+            </div>
+            <div>
+                <label>Social Info :</label>
+                <input name="SocialInfo" type="text" asp-for="PersonData.SocialInfo"  autocomplete="off" />
+            </div>
+            <div>
+                <label>Contact Info :</label>
+                <input name="ContactInfo" type="text"  asp-for="PersonData.ContactInfo"  />
+            </div>
+            <button type="submit" name="btnSave">Save</button>
+        </div>
+    </form>
+</div>
