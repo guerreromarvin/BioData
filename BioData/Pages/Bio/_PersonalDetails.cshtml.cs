@@ -8,20 +8,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BioData.Pages.Bio
 {
-    public class DataFormModel : PageModel
+    public class _PersonalDetailsModel : PageModel
     {
         [BindProperty]
-        public Guid? PersonId {get;set; }
+        public Person person { get; set; }
 
-        public string PageJSON {get;set;}
 
         public void OnGet()
         {
-        }
-
-        public void OnPost()
-        {
-            var u = DateTime.Now;
         }
     }
 }
