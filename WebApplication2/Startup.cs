@@ -1,24 +1,18 @@
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Authorization;
+using BioData.Data;
+using BioData.Data.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Identity.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BioData.Data;
-using Microsoft.Identity.Web.UI;
-using Microsoft.AspNetCore.Authentication;
-
 
 namespace BioData
 {
@@ -38,10 +32,10 @@ namespace BioData
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                          .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddRazorPages();
             services.AddAuthentication()
                         .AddFacebook(facebookOptions =>
                         {
@@ -49,22 +43,12 @@ namespace BioData
                             facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
                         }).AddGoogle(options =>
                         {
-                            IConfigurationSection googleAuthNSection = Configuration.GetSection("Authentication:Google");
+                            IConfigurationSection googleAuthNSection =
+                                Configuration.GetSection("Authentication:Google");
+
                             options.ClientId = googleAuthNSection["ClientId"];
                             options.ClientSecret = googleAuthNSection["ClientSecret"];
                         });
-                     //   .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"));
-
-            services.AddControllersWithViews(options =>
-            {
-                var policy = new AuthorizationPolicyBuilder()
-                    .RequireAuthenticatedUser()
-                    .Build();
-                options.Filters.Add(new AuthorizeFilter(policy));
-            });
-
-            services.AddRazorPages().AddMicrosoftIdentityUI();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,9 +76,6 @@ namespace BioData
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
