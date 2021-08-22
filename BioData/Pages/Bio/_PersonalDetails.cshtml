@@ -2,19 +2,32 @@
 @{
 }
 
-
-<div class="form-group">
-    <label asp-for="person.FirstName" class="control-label"></label>
-    <input asp-for="person.FirstName" class="form-control" />
-    <span asp-validation-for="person.FirstName" class="text-danger"></span>
+<div class=" card card-body">
+    <div class="form-group">
+        <label asp-for="person.FirstName" class="control-label"></label>
+        <input asp-for="person.FirstName" class="form-control" />
+        <span asp-validation-for="person.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="person.MiddleName" class="control-label"></label>
+        <input asp-for="person.MiddleName" class="form-control" />
+        <span asp-validation-for="person.MiddleName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="person.LastName" class="control-label"></label>
+        <input asp-for="person.LastName" class="form-control" />
+        <span asp-validation-for="person.LastName" class="text-danger"></span>
+    </div>
 </div>
-<div class="form-group">
-    <label asp-for="person.MiddleName" class="control-label"></label>
-    <input asp-for="person.MiddleName" class="form-control" />
-    <span asp-validation-for="person.MiddleName" class="text-danger"></span>
-</div>
-<div class="form-group">
-    <label asp-for="person.LastName" class="control-label"></label>
-    <input asp-for="person.LastName" class="form-control" />
-    <span asp-validation-for="person.LastName" class="text-danger"></span>
+<hr />
+<h2>Family Details</h2>
+<div class=" card card-body">
+    <div class="form-group">
+        <label class="control-label">Father's Name</label>
+        <input class="form-control" type="text" v-model="person.FathersName" placeholder="Father's Name" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Mother's Name</label>
+        <input class="form-control" type="text" v-model="person.MothersName" placeholder="Mother's Name" />
+    </div>
 </div>

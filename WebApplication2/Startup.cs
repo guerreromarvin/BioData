@@ -1,18 +1,19 @@
-using BioData.Data;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication2.Data;
 
-namespace BioData
+namespace WebApplication2
 {
     public class Startup
     {
@@ -26,20 +27,27 @@ namespace BioData
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                         .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddRazorPages();
-            services.AddControllers();
-            services.AddDbContext<BioDataDbContext>(
-                options => options.UseSqlServer("name=ConnectionStrings:BioDbCnStr"));
+            services.AddAuthentication()
+                        .AddFacebook(facebookOptions =>
+                        {
+                            facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                            facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+                        }).AddGoogle(options =>
+                        {
+                            IConfigurationSection googleAuthNSection =
+                                Configuration.GetSection("Authentication:Google");
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddUserStore<BioDataDbContext>();
-
-            services.AddAuthentication().AddFacebook(facebookOptions =>
-            {
-                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
-            });
-
+                            options.ClientId = googleAuthNSection["ClientId"];
+                            options.ClientSecret = googleAuthNSection["ClientSecret"];
+                        });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +56,7 @@ namespace BioData
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {
@@ -61,6 +70,7 @@ namespace BioData
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -69,11 +79,4 @@ namespace BioData
             });
         }
     }
-    public class ApplicationUser : IdentityUser
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime BirthDate { get; set; }
-    }
-
 }
