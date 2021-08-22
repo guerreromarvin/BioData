@@ -1,0 +1,486 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>aspnet-BioData-8F4C1AC0-BCCA-4EF3-9B5A-B98413D212CB</UserSecretsId>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" Link="wwwroot\css\bootstrap-grid.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" Link="wwwroot\css\bootstrap-grid.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" Link="wwwroot\css\bootstrap-grid.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" Link="wwwroot\css\bootstrap-grid.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css" Link="wwwroot\css\bootstrap-grid.rtl.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css.map" Link="wwwroot\css\bootstrap-grid.rtl.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css" Link="wwwroot\css\bootstrap-grid.rtl.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css.map" Link="wwwroot\css\bootstrap-grid.rtl.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" Link="wwwroot\css\bootstrap-reboot.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" Link="wwwroot\css\bootstrap-reboot.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" Link="wwwroot\css\bootstrap-reboot.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" Link="wwwroot\css\bootstrap-reboot.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css" Link="wwwroot\css\bootstrap-reboot.rtl.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css.map" Link="wwwroot\css\bootstrap-reboot.rtl.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css" Link="wwwroot\css\bootstrap-reboot.rtl.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css.map" Link="wwwroot\css\bootstrap-reboot.rtl.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css" Link="wwwroot\css\bootstrap-utilities.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map" Link="wwwroot\css\bootstrap-utilities.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css" Link="wwwroot\css\bootstrap-utilities.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map" Link="wwwroot\css\bootstrap-utilities.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css" Link="wwwroot\css\bootstrap-utilities.rtl.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css.map" Link="wwwroot\css\bootstrap-utilities.rtl.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css" Link="wwwroot\css\bootstrap-utilities.rtl.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css.map" Link="wwwroot\css\bootstrap-utilities.rtl.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.css" Link="wwwroot\css\bootstrap.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.css.map" Link="wwwroot\css\bootstrap.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css" Link="wwwroot\css\bootstrap.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" Link="wwwroot\css\bootstrap.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css" Link="wwwroot\css\bootstrap.rtl.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css.map" Link="wwwroot\css\bootstrap.rtl.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css" Link="wwwroot\css\bootstrap.rtl.min.css">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css.map" Link="wwwroot\css\bootstrap.rtl.min.css.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" Link="wwwroot\js\bootstrap.bundle.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" Link="wwwroot\js\bootstrap.bundle.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" Link="wwwroot\js\bootstrap.bundle.min.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" Link="wwwroot\js\bootstrap.bundle.min.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.esm.js" Link="wwwroot\js\bootstrap.esm.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map" Link="wwwroot\js\bootstrap.esm.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js" Link="wwwroot\js\bootstrap.esm.min.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map" Link="wwwroot\js\bootstrap.esm.min.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.js" Link="wwwroot\js\bootstrap.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.js.map" Link="wwwroot\js\bootstrap.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js" Link="wwwroot\js\bootstrap.min.js">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+    <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" Link="wwwroot\js\bootstrap.min.js.map">
+      <Private>False</Private>
+      <NuGetPackageVersion>5.1.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <Pack>false</Pack>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.0-preview.6.21355.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-preview.6.21355.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0-preview.6.21355.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-preview.6.21352.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.6.21352.1" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\site.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\js\site.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\bootstrap\LICENSE">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-notify\notify.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\additional-methods.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery-validation\LICENSE.md">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\dist\jquery.min.map">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\lib\jquery\LICENSE.txt">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\DataLibrary\XML\PersonData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

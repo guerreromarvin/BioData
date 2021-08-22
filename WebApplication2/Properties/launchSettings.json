@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "WebApplication2": {
+    "BioData": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

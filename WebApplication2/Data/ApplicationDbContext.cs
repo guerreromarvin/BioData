@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace WebApplication2.Data
+namespace BioData.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
