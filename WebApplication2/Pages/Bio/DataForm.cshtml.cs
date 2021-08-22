@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using System.Xml;
+using Newtonsoft.Json;
 
 namespace BioData.Pages.Bio
 {
@@ -43,6 +46,27 @@ namespace BioData.Pages.Bio
             {
                 PageJSON = "{}";
             }
+        }
+
+        public IActionResult OnGetSomeString()
+        {
+            return Content("something");
+        }
+
+
+        public IActionResult OnPostButton1(IFormCollection data)
+        {
+            var u = DateTime.Now;
+            var formdata = Request.Form["PageJSON"];
+
+            //XmlDocument doc = new XmlDocument();
+            //doc.LoadXml(xml);
+            //string jsonText = JsonConvert.SerializeXmlNode(doc);
+
+            // To convert JSON text contained in string json into an XML node
+            XmlDocument doc = JsonConvert.DeserializeXmlNode(@"{'data':" +formdata + "}");
+
+            return Content(doc.InnerXml);
         }
 
         public void OnPost()
