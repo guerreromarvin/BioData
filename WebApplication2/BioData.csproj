@@ -6,6 +6,14 @@
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Include="C:\Users\marvi\.nuget\packages\bootstrap\5.1.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" Link="wwwroot\css\bootstrap-grid.css">
       <Private>False</Private>

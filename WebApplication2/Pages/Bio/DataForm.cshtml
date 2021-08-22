@@ -1,4 +1,7 @@
 ﻿@page
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model BioData.Pages.Bio.DataFormModel
 @{
 }
@@ -47,14 +50,40 @@
            addWorkHistoryLine : function(){
                $.notify("New Work Added.","success");
                this.workhistory.push({});
-           }
+           },
+           addEducationLine : function(){
+               $.notify("New Education Added.","success");
+               this.education.push({});
+           },
+           stringifydata : function ()
+            {
+                var u = JSON.stringify(this._data);
+                console.log(u);
+            $("#pgjson").val(JSON.stringify(this._data));
+            }
+       },
+       mounted (){
+          const  personJsonDetail = @Html.Raw(@Model.PageJSON);
+
+          if (personJsonDetail != {})
+          {
+              if (personJsonDetail.person)
+              {
+                this.person = personJsonDetail.person;
+                }
+              if (personJsonDetail.education)
+              {
+              this.education = personJsonDetail.education;
+              }
+              if (personJsonDetail.workhistory)
+              {
+                this.workhistory = personJsonDetail.workhistory;
+              }
+          }
        }
      })
 
-     function stringifydata()
-     {
-       $("#pgjson").val(JSON.stringify(appVue._data));
-     }
+
 
      $(document).ready(function(){
          $(".maskedinput").inputmask();
@@ -62,17 +91,24 @@
     });
 
 </script>
+
 }
 
 <div class="row">
     <div id="formVue" class="col-md-8">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="PersonId" />
+            <input type="hidden" asp-for="UserId" />
             <input id="pgjson" name="PageJSON" type="hidden" asp-for="PageJSON" />
+            <div>
+            </div>
+            <div>
+                <button class="btn primary" type="submit" name="btnSave" v-on:click="stringifydata">Save</button>
+                <button class="btn primary" type="submit" name="btnDownload" v-on:click="stringifydata">Download Data</button>
+            </div>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="tabPersonalDetails-tab" data-toggle="tab" href="#tabPersonalDetails" role="tab" aria-controls="tabPersonalDetails" aria-selected="true">Personal Details</a>
+                    <a class="nav-link active" id="tabPersonalDetails-tab" data-toggle="tab" href="#tabPersonalDetails" role="tab" aria-controls="tabPersonalDetails" aria-selected="true">Personal Destails</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="tabEducation-tab" data-toggle="tab" href="#tabEducation" role="tab" aria-controls="tabEducation" aria-selected="false">Education</a>

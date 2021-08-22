@@ -15,6 +15,7 @@ namespace BioData.Data
         }
 
         public DbSet<UserProfileModel> UserProfile { get; set; }
+        public DbSet<HistoryUserProfileModel> HistoryUserProfile { get; set; }
 
     }
 }

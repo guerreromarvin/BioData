@@ -49,6 +49,8 @@ namespace BioData
                             options.ClientId = googleAuthNSection["ClientId"];
                             options.ClientSecret = googleAuthNSection["ClientSecret"];
                         });
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
