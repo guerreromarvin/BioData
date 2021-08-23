@@ -59,13 +59,7 @@ namespace BioData.Pages.Bio
             var u = DateTime.Now;
             var formdata = Request.Form["PageJSON"];
 
-            //XmlDocument doc = new XmlDocument();
-            //doc.LoadXml(xml);
-            //string jsonText = JsonConvert.SerializeXmlNode(doc);
-
-            // To convert JSON text contained in string json into an XML node
             XmlDocument doc = JsonConvert.DeserializeXmlNode(@"{'data':" +formdata + "}");
-
             return Content(doc.InnerXml);
         }
 
