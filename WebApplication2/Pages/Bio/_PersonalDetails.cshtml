@@ -3,31 +3,102 @@
 }
 
 <div class=" card card-body">
-    <div class="form-group">
-        <label asp-for="person.FirstName" class="control-label"></label>
-        <input asp-for="person.FirstName"  v-model="person.FirstName"  class="form-control" />
-        <span asp-validation-for="person.FirstName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="person.MiddleName" class="control-label"></label>
-        <input asp-for="person.MiddleName"   v-model="person.MiddleName" class="form-control" />
-        <span asp-validation-for="person.MiddleName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="person.LastName" class="control-label"></label>
-        <input asp-for="person.LastName"  v-model="person.LastName"  class="form-control" />
-        <span asp-validation-for="person.LastName" class="text-danger"></span>
-    </div>
-</div>
-<hr />
-<h2>Family Details</h2>
-<div class=" card card-body">
-    <div class="form-group">
-        <label class="control-label">Father's Name</label>
-        <input class="form-control" type="text" v-model="person.FathersName" placeholder="Father's Name" />
-    </div>
-    <div class="form-group">
-        <label class="control-label">Mother's Name</label>
-        <input class="form-control" type="text" v-model="person.MothersName" placeholder="Mother's Name" />
+    <div class="container">
+        <div class="row">
+            <h3>Personal Details</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label asp-for="person.FirstName" class="control-label"></label>
+                <input asp-for="person.FirstName" v-model="person.FirstName" class="form-control" />
+                <span asp-validation-for="person.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-sm">
+                <label asp-for="person.MiddleName" class="control-label"></label>
+                <input asp-for="person.MiddleName" v-model="person.MiddleName" class="form-control" />
+                <span asp-validation-for="person.MiddleName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-6">
+                <label asp-for="person.LastName" class="control-label"></label>
+                <input asp-for="person.LastName" v-model="person.LastName" class="form-control" />
+                <span asp-validation-for="person.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-3">
+                <label class="control-label">Title</label>
+                <input class="form-control" type="text" v-model="person.Title" placeholder="Title" />
+            </div>
+            <div class="form-group col-3">
+                <label class="control-label">Suffix</label>
+                <input class="form-control" type="text" v-model="person.Suffix" placeholder="Suffix" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">BirthDate</label>
+                <input class="form-control" type="date" v-model="person.BirthDate" placeholder="BirthDate" />
+            </div>
+            <div class="form-group col-sm">
+                <label class="control-label">BirthPlace</label>
+                <input class="form-control" type="text" v-model="person.BirthPlace" placeholder="BirthPlace" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">Gender</label>
+                <div>
+                    <span class="col-5"><input type="radio" name="gender" value="male" v-model="person.Gender"> <label>Male</label></span>
+                    <span><input type="radio" name="gender" value="female" v-model="person.Gender"> <label>Female</label></span>
+                </div>
+            </div>
+            <div class="form-group col-sm">
+                <label class="control-label">Civil Status</label>
+                <div>
+                    <span><input type="radio" name="CivilStatus" value="Single" v-model="person.CivilStatus"> <label>Single</label></span>
+                    <span><input type="radio" name="CivilStatus" value="Married" v-model="person.CivilStatus"> <label>Married</label></span>
+                    <span><input type="radio" name="CivilStatus" value="Widowed" v-model="person.CivilStatus"> <label>Widowed</label></span>
+                    <span><input type="radio" name="CivilStatus" value="Divorced" v-model="person.CivilStatus"> <label>Divorced</label></span>
+                    <span><input type="radio" name="CivilStatus" value="N.A" v-model="person.CivilStatus"> <label>N.A</label></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <div class="form-group col-sm">
+                    <label class="control-label">Citizenship</label>
+                    <input class="form-control" type="text" v-model="person.Citizenship" />
+                </div>
+            </div>
+            <div class="form-group col-sm">
+                <div class="form-group col-sm">
+                    <label class="control-label">Passport</label>
+                    <input class="form-control" type="text" v-model="person.Passport" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <div class="form-group col-sm">
+                    <label class="control-label">Height</label>
+                    <input class="form-control" type="text" v-model="person.Height" />
+                </div>
+            </div>
+            <div class="form-group col-sm">
+                <div class="form-group col-sm">
+                    <label class="control-label">Weight</label>
+                    <input class="form-control" type="text" v-model="person.Weight" />
+                </div>
+            </div>
+            <div class="form-group col-sm">
+                <div class="form-group col-sm">
+                    <label class="control-label">Religion</label>
+                    <input class="form-control" type="text" v-model="person.Religion" />
+                </div>
+            </div>
+        </div>
+        <hr />
+        <partial name="Personal/_FamilyDetails" />
     </div>
 </div>

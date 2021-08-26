@@ -2,41 +2,61 @@
 @{
 }
 
-<div>
-    <div>
-        <div v-for="(edu,ndex) in education">
-            <div class="form-row g-3 card-body">
-                <div class="col-sm-7">
-                    <input class="form-control" v-bind:name="'educline_' + ndex + '.Institution'" type="text" v-model="edu.Institution" placeholder="Institution" />
-                </div>
-                <div class="col-sm-5">
-                    <input class="form-control" name="educline.Location" type="text" v-model="edu.Location" placeholder="Location" />
-                </div>
-                <div class="col-sm-4">
-                    <input class="form-control" name="educline.Course" type="text" v-model="edu.Course" placeholder="Course" />
-                </div>
-                <div class="col-sm-1">
-                    <label>From</label>
-                </div>
-                <div class="col-sm-1">
-                    <input class="form-control" style="width:60px;" name="edu.MonthCompletedFrom" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedFrom" placeholder="MM" />
-                </div>
-                <div class="col-sm-2">
-                    <input class="form-control" style="width:90px;" name="edu.YearCompletedFrom" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedFrom" placeholder="YYYY" />
-                </div>
-
-                <div class="col-sm-1">
-                    <label>To</label>
-                </div>
-                <div class="col-sm-1">
-                    <input class="form-control" style="width:60px;" name="edu.MonthCompletedTo" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedTo" placeholder="MM" />
-                </div>
-                <div class="col-sm-2">
-                    <input class="form-control" style="width:90px;" name="edu.YearCompletedTo" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedTo" placeholder="YYYY" />
-                </div>
+<div class=" card card-body">
+    <div class="container" v-for="(edu,ndex) in education">
+        <div class="row">
+            <div class="form-group  col-sm-7">
+                <label class="control-label">Organisation</label>
+                <input class="form-control" type="text" v-model="edu.Institution" placeholder="Institution" />
             </div>
-            <hr />
+            <div class="form-group  col-sm-3">
+                <label class="control-label">Location</label>
+                <input class="form-control" type="text" v-model="edu.Location" placeholder="Location" />
+            </div>
         </div>
-        <button class="btn" type="button" v-on:click="addEducationLine" >Add</button>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">Education Level</label>
+
+                <select v-model="edu.Location" class="form-select" aria-label="Education Level">
+                    <option selected>Level</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="tertiary">Tertiary</option>
+                    <option value="graduate">Graduate</option>
+                    <option value="masteral">Masteral</option>
+                    <option value="doctoral">Doctoral</option>
+                    <option value="internship">Internship</option>
+                    <option value="vocational">Vocational</option>
+                    <option value="certificate">Certificate</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <input class="form-control" type="text" v-model="edu.Course" placeholder="Course" />
+            </div>
+            <div class="form-group col-sm-1">
+                <label>From</label>
+            </div>
+            <div class="form-group col-sm-1">
+                <input class="form-control" style="width:60px;" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedFrom" placeholder="MM" />
+            </div>
+            <div class="form-group col-sm-2">
+                <input class="form-control" style="width:90px;" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedFrom" placeholder="YYYY" />
+            </div>
+
+            <div class="col-sm-1">
+                <label>To</label>
+            </div>
+            <div class="col-sm-1">
+                <input class="form-control" style="width:60px;" type="text" pattern="\d*" maxlength="2" v-model="edu.MonthCompletedTo" placeholder="MM" />
+            </div>
+            <div class="col-sm-2">
+                <input class="form-control" style="width:90px;" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedTo" placeholder="YYYY" />
+            </div>
+        </div>
+        <hr />
     </div>
-</div>
+    <button class="btn" type="button" v-on:click="addEducationLine">Add</button>
+</div>>

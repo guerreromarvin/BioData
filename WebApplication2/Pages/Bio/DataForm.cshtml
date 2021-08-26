@@ -38,12 +38,13 @@
          message: 'Hello Vue!',
          person :{},
          education: [
-         {'School':'FS'},
-         {'School':'AMA'},
-         {'School':'STI'}
+         {'School':''},
              ],
          workhistory: [
-         {'School':'FS'},
+         {'Organisation':''},
+             ],
+         children: [
+         {'FirstName':''},
              ]
        },
        methods:{
@@ -54,6 +55,10 @@
            addEducationLine : function(){
                $.notify("New Education Added.","success");
                this.education.push({});
+           },
+           addChildLine : function(){
+               $.notify("New Child Added.","success");
+               this.children.push({});
            },
            stringifydata : function ()
             {
@@ -79,6 +84,10 @@
               {
                 this.workhistory = personJsonDetail.workhistory;
               }
+              if (personJsonDetail.children)
+              {
+                this.children = personJsonDetail.children;
+              }
           }
        }
      })
@@ -95,7 +104,7 @@
 }
 
 <div class="row">
-    <div id="formVue" class="col-md-8">
+    <div id="formVue" class="col-md-8 mb-5">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UserId" />
@@ -119,20 +128,17 @@
             </ul>
             <div class="tab-content" id="inforTabContent">
                 <div class="tab-pane fade show active" id="tabPersonalDetails" role="tabpanel" aria-labelledby="tabPersonalDetails-tab">
-                    <h2>Personal Details</h2>
-                    <div id="divPersonalDetails" class=" multi-collapse">
+                    <div id="divPersonalDetails">
                         <partial name="_PersonalDetails" model="new _PersonalDetailsModel()" />
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabEducation" role="tabpanel" aria-labelledby="tabEducation-tab">
-                    <h2>Education</h2>
-                    <div id="divEducation" class="multi-collapse">
+                    <div id="divEducation">
                         <partial name="_Education" model="new _EducationModel()" />
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabWork" role="tabpanel" aria-labelledby="tabWork-tab">
-                    <h2 data-toggle="collapse" data-target="#divWork">Work History</h2>
-                    <div id="divWork" class="multi-collapse">
+                    <div id="divWork">
                         <partial name="_Work" model="new _WorkModel()" />
                     </div>
                 </div>
