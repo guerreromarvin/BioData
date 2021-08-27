@@ -10,6 +10,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="/lib/jquery-confirm/dist/jquery-confirm.css" rel="stylesheet" />
+
+
 <style>
     .select,
     #locale {
@@ -18,6 +21,14 @@
 
     .like {
         margin-right: 10px;
+    }
+
+    .alternating:nth-child(odd) {
+        background-color: #F6F6F6;
+    }
+
+    .alternating:nth-child(even) {
+        background-color: white;
     }
 </style>
 
@@ -29,13 +40,13 @@
 <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
 <script src="/lib/jquery-notify/notify.min.js"></script>
+<script src="/lib/jquery-confirm/dist/jquery-confirm.js"></script>
 
 <script>
 
     var appVue = new Vue({
        el: '#formVue',
        data: {
-         message: 'Hello Vue!',
          person :{},
          education: [
          {'School':''},
@@ -45,7 +56,9 @@
              ],
          children: [
          {'FirstName':''},
-             ]
+             ],
+         projects:[{}],
+         contacts:{}
        },
        methods:{
            addWorkHistoryLine : function(){
@@ -60,10 +73,29 @@
                $.notify("New Child Added.","success");
                this.children.push({});
            },
+           addProject : function(){
+               $.notify("New Project Added.","success");
+               this.projects.push({});
+           },
+           deleteEvent: function(collection, index) {
+               let self = this;
+               $.confirm({
+                    title: 'Confirm Deletion!',
+                    content: 'Are you sure you want to delete item?',
+                    buttons: {
+                        confirm: function () {
+                            collection.splice(index, 1);
+                            $.notify('Item deleted','success');
+                        },
+                        cancel: function () {
+                            $.notify('Item not deleted','success');
+                        }
+                    }
+                });
+            },
            stringifydata : function ()
             {
                 var u = JSON.stringify(this._data);
-                console.log(u);
             $("#pgjson").val(JSON.stringify(this._data));
             }
        },
@@ -76,18 +108,33 @@
               {
                 this.person = personJsonDetail.person;
                 }
+
+              if (personJsonDetail.contacts)
+              {
+                this.contacts = personJsonDetail.contacts;
+                }
+
+
+              if (personJsonDetail.projects)
+              {
+                this.projects = personJsonDetail.projects;
+                }
+
               if (personJsonDetail.education)
               {
               this.education = personJsonDetail.education;
               }
+
               if (personJsonDetail.workhistory)
               {
                 this.workhistory = personJsonDetail.workhistory;
               }
+
               if (personJsonDetail.children)
               {
                 this.children = personJsonDetail.children;
               }
+
           }
        }
      })
@@ -120,16 +167,35 @@
                     <a class="nav-link active" id="tabPersonalDetails-tab" data-toggle="tab" href="#tabPersonalDetails" role="tab" aria-controls="tabPersonalDetails" aria-selected="true">Personal Destails</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" id="tabContacts-tab" data-toggle="tab" href="#tabContacts" role="tab" aria-controls="tabContacts" aria-selected="false">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tabFamily-tab" data-toggle="tab" href="#tabFamily" role="tab" aria-controls="tabFamily" aria-selected="false">Family Details</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" id="tabEducation-tab" data-toggle="tab" href="#tabEducation" role="tab" aria-controls="tabEducation" aria-selected="false">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="tabWork-tab" data-toggle="tab" href="#tabWork" role="tab" aria-controls="tabContact" aria-selected="false">Work Details</a>
+                    <a class="nav-link" id="tabWork-tab" data-toggle="tab" href="#tabWork" role="tab" aria-controls="tabWork" aria-selected="false">Work Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tabProfessional-tab" data-toggle="tab" href="#tabProfessional" role="tab" aria-controls="tabProfessional" aria-selected="false">Professional Details</a>
                 </li>
             </ul>
             <div class="tab-content" id="inforTabContent">
                 <div class="tab-pane fade show active" id="tabPersonalDetails" role="tabpanel" aria-labelledby="tabPersonalDetails-tab">
                     <div id="divPersonalDetails">
                         <partial name="_PersonalDetails" model="new _PersonalDetailsModel()" />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabFamily" role="tabpanel" aria-labelledby="tabFamily-tab">
+                    <div id="divFamily">
+                        <partial name="Personal/_FamilyDetails" />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabContacts" role="tabpanel" aria-labelledby="tabContacts-tab">
+                    <div id="divContacts">
+                        <partial name="Personal/_ContactDetails" />
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabEducation" role="tabpanel" aria-labelledby="tabEducation-tab">
@@ -140,6 +206,11 @@
                 <div class="tab-pane fade" id="tabWork" role="tabpanel" aria-labelledby="tabWork-tab">
                     <div id="divWork">
                         <partial name="_Work" model="new _WorkModel()" />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabProfessional" role="tabpanel" aria-labelledby="tabProfessional-tab">
+                    <div id="divProfessional">
+                        <partial name="Work/_Professional" />
                     </div>
                 </div>
             </div>

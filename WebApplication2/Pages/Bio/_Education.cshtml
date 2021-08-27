@@ -3,8 +3,8 @@
 }
 
 <div class=" card card-body">
-    <div class="container" v-for="(edu,ndex) in education">
-        <div class="row">
+    <div class="container alternating" v-for="(edu,ndex) in education">
+        <div class="row ">
             <div class="form-group  col-sm-7">
                 <label class="control-label">Organisation</label>
                 <input class="form-control" type="text" v-model="edu.Institution" placeholder="Institution" />
@@ -56,7 +56,9 @@
                 <input class="form-control" style="width:90px;" type="text" pattern="\d*" maxlength="4" v-model="edu.YearCompletedTo" placeholder="YYYY" />
             </div>
         </div>
+        <button class="btn btn-secondary" type="button" v-on:click="deleteEvent(education,ndex)">Remove</button>
+
         <hr />
     </div>
-    <button class="btn" type="button" v-on:click="addEducationLine">Add</button>
-</div>>
+    <button class="btn btn-primary" type="button" v-on:click="addEducationLine">Add</button>
+</div>
