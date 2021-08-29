@@ -1,0 +1,128 @@
+﻿<data>
+    <person>
+        <FirstName>Marvin</FirstName>
+        <MiddleName>Naga</MiddleName>
+        <LastName>Guerrero</LastName>
+        <Salutation>fasdfasdf</Salutation>
+        <FathersName>Nestor Tibar Guerrero</FathersName>
+        <MothersName>Elenita Viola Naga Guerrero</MothersName>
+        <Suffix></Suffix>
+        <Title>Consultant</Title>
+        <BirthPlace>Manila</BirthPlace>
+        <BirthDate>1980-05-16</BirthDate>
+        <Gender>male</Gender>
+        <Spouse>Julia Anquilo Guerrero</Spouse>
+        <Height>5'4"</Height>
+        <Weight>83 KG</Weight>
+        <Religion>Roman Catholic</Religion>
+        <Citizenship>Filipino</Citizenship>
+        <CivilStatus>Married</CivilStatus>
+        <Background>I have more than 19 years experience in software systems development. I have very strong experience in system architecture, database schema design, data access, business/front-end development and testing. I can work solo or with a team, I can perform lead and management roles. I taught myself programming when I was 10 and built a career around it. 
+</Background>
+        <RolesAndResponsibilities>Gather information, conduct interviews, research and development.
+Translate business requirements into technical and functional specifications.	
+Design solutions to meet the specified requirements.
+Quality Assurance
+Writing Unit and Integration tests.
+Manage schedules and allocation of tasks to team members.	
+Liaise directly with business partners regarding operations, system and data integration 
+Influence decisions on technologies and methodologies.
+Provide support to the sales and marketing by providing technical information.
+Create graphics and content for marketing materials.
+Collaborate with support teams and clients.
+Manage Source code versions and system deployment.
+Operate, manage and maintain the development and production servers 	
+</RolesAndResponsibilities>
+    </person>
+    <education>
+        <Institution>a</Institution>
+    </education>
+    <education>
+        <Institution>b</Institution>
+    </education>
+    <education>
+        <Institution>c</Institution>
+    </education>
+    <workhistory>
+        <School>FS</School>
+        <Organisation>GSMI Philippines</Organisation>
+        <Location>Eastwood Libis. Philippines</Location>
+        <MonthCompletedFrom>7</MonthCompletedFrom>
+        <YearCompletedFrom>2003</YearCompletedFrom>
+        <MonthCompletedTo>8</MonthCompletedTo>
+        <YearCompletedTo>2006</YearCompletedTo>
+        <RolesAndRespinsibilities>Full stack developer for the RPTIS - Real Property Tax Information System deployed to Butuan City Philippines.
+
+</RolesAndRespinsibilities>
+        <Position>Senior Systems Analyst </Position>
+        <Decription>Geographical Data</Decription>
+        <RolesAndResponsibilities>Gather information, conduct interviews, research and development.
+Translate business requirements into technical and functional specifications.	
+Design solutions to meet the specified requirements.
+Quality Assurance
+Writing Unit and Integration tests.
+Manage schedules and allocation of tasks to team members.	
+Liaise directly with business partners regarding operations, system and data integration 
+Influence decisions on technologies and methodologies.
+Provide support to the sales and marketing by providing technical information.
+Create graphics and content for marketing materials.
+Collaborate with support teams and clients.
+Manage Source code versions and system deployment.
+Operate, manage and maintain the development and production servers 	
+</RolesAndResponsibilities>
+    </workhistory>
+    <workhistory>
+        <Organisation>DNRPS </Organisation>
+        <Location>Singapore</Location>
+        <Position>Senior Sotfware Engineer</Position>
+        <MonthCompletedFrom>10</MonthCompletedFrom>
+        <YearCompletedFrom>2006</YearCompletedFrom>
+        <YearCompletedTo>2008</YearCompletedTo>
+        <MonthCompletedTo>11</MonthCompletedTo>
+        <RolesAndResponsibilities>Gather information, conduct interviews, research and development.
+Translate business requirements into technical and functional specifications.	
+Design solutions to meet the specified requirements.
+Quality Assurance
+Writing Unit and Integration tests.
+Manage schedules and allocation of tasks to team members.	
+Liaise directly with business partners regarding operations, system and data integration 
+Influence decisions on technologies and methodologies.
+Provide support to the sales and marketing by providing technical information.
+Create graphics and content for marketing materials.
+Collaborate with support teams and clients.
+Manage Source code versions and system deployment.
+Operate, manage and maintain the development and production servers 	
+</RolesAndResponsibilities>
+        <Decription>Field Inteligence</Decription>
+    </workhistory>
+    <children>
+        <FirstName>Jules Martin</FirstName>
+        <LastName>Guerrero</LastName>
+        <MiddleName>Anquilo</MiddleName>
+        <Gender>male</Gender>
+        <BirthDate>2002-09-26</BirthDate>
+    </children>
+    <children>
+        <FirstName>Elijah</FirstName>
+        <Gender>male</Gender>
+        <MiddleName>Anquilo</MiddleName>
+        <BirthDate>2005-12-17</BirthDate>
+        <LastName>Guerrero</LastName>
+    </children>
+    <children>
+        <FirstName>Sofia Amara</FirstName>
+        <Gender>female</Gender>
+        <MiddleName>Anquilo</MiddleName>
+        <LastName>Guerrero</LastName>
+        <BirthDate>2013-07-15</BirthDate>
+    </children>
+    <projects>
+        <Description>asdfasdf asdf</Description>
+        <ProjectName>KAES</ProjectName>
+        <Organisation></Organisation>
+    </projects>
+    <contacts>
+        <Phone>asdasdas</Phone>
+        <Email>marvin.n.guerrero@gmail.com</Email>
+    </contacts>
+</data>

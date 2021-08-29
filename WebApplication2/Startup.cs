@@ -1,3 +1,4 @@
+using AutoMapper;
 using BioData.Data;
 using BioData.Data.Models;
 using Microsoft.AspNetCore.Builder;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -83,7 +85,24 @@ namespace BioData
                 endpoints.MapRazorPages();
             });
 
-
+            app.UserMAppingProfile();
         }
     }
+}
+//
+// Summary:
+//     Constains extensions for configuring routing on an Microsoft.AspNetCore.Builder.IApplicationBuilder.
+public static class AutoMapperConfigurations
+{
+    public static IApplicationBuilder UserMAppingProfile(this IApplicationBuilder builder, Action<IEndpointRouteBuilder> configure)
+    {
+        Mapper.Initialize(cfg =>
+        {
+            cfg.AddCollectionMappers();
+            // Configuration code
+        });
+
+        return builder;
+    }
+  
 }

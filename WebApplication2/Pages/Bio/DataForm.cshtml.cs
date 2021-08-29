@@ -11,6 +11,8 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using System.Xml;
 using Newtonsoft.Json;
+using System.Data;
+using System.ComponentModel;
 
 namespace BioData.Pages.Bio
 {
@@ -54,12 +56,67 @@ namespace BioData.Pages.Bio
         }
 
 
+        public IActionResult OnPostButton2(IFormCollection data)
+        {
+            var u = DateTime.Now;
+            var formdata = Request.Form["PageJSON"];
+
+            var deserializedPerson = JsonConvert.DeserializeObject<ProfileRootobject>(formdata);
+
+            deserializedPerson.person
+
+
+            DataTable dtperson = GenerateDataTableFromClass<Person>("person");
+            DataTable dtcontacts = GenerateDataTableFromClass<Contacts>("contacts");
+            DataTable dteducation = GenerateDataTableFromClass<Education>("education");
+            DataTable dtwork = GenerateDataTableFromClass<Workhistory>("workhistory");
+            DataTable dtchiled = GenerateDataTableFromClass<Child>("child");
+            DataTable dtproject = GenerateDataTableFromClass<Project>("project");
+
+            var ds = new DataSet();
+            ds.Tables.Add(dtperson);
+            ds.Tables.Add(dtcontacts);
+            ds.Tables.Add(dteducation);
+            ds.Tables.Add(dtwork);
+            ds.Tables.Add(dtproject);
+            ds.Tables.Add(dtchiled);
+            ds.WriteXmlSchema("PD.XSD");
+
+            return Content("file saved");
+        }
+
+        private static DataTable GenerateDataTableFromClass<T>(string tablename,ref T data)
+        {
+            PropertyDescriptorCollection props =
+            TypeDescriptor.GetProperties(typeof(T));
+            DataTable dt = new DataTable(tablename);
+            foreach (PropertyDescriptor p in props)
+                dt.Columns.Add(p.Name, p.PropertyType);
+
+            foreach (var item in data as T)
+            {
+
+            }
+
+            return dt;
+        }
+
+        private static DataTable GenerateDataTableFromClass<T>(string tablename)
+        {
+            PropertyDescriptorCollection props =
+            TypeDescriptor.GetProperties(typeof(T));
+            DataTable dt = new DataTable(tablename);
+            foreach (PropertyDescriptor p in props)
+                dt.Columns.Add(p.Name, p.PropertyType);
+            return dt;
+        }
+
         public IActionResult OnPostButton1(IFormCollection data)
         {
             var u = DateTime.Now;
             var formdata = Request.Form["PageJSON"];
 
-            XmlDocument doc = JsonConvert.DeserializeXmlNode(@"{'data':" +formdata + "}");
+            XmlDocument doc = JsonConvert.DeserializeXmlNode(@"{'data':" + formdata + "}");
             return Content(doc.InnerXml);
         }
 
