@@ -13,6 +13,8 @@ using System.Xml;
 using Newtonsoft.Json;
 using System.Data;
 using System.ComponentModel;
+using Nelibur.ObjectMapper;
+using System.Net;
 
 namespace BioData.Pages.Bio
 {
@@ -63,8 +65,6 @@ namespace BioData.Pages.Bio
 
             var deserializedPerson = JsonConvert.DeserializeObject<ProfileRootobject>(formdata);
 
-            deserializedPerson.person
-
 
             DataTable dtperson = GenerateDataTableFromClass<Person>("person");
             DataTable dtcontacts = GenerateDataTableFromClass<Contacts>("contacts");
@@ -72,6 +72,14 @@ namespace BioData.Pages.Bio
             DataTable dtwork = GenerateDataTableFromClass<Workhistory>("workhistory");
             DataTable dtchiled = GenerateDataTableFromClass<Child>("child");
             DataTable dtproject = GenerateDataTableFromClass<Project>("project");
+
+
+            var g = dtperson.NewRow();
+            g["FirstName"] = deserializedPerson.person.FirstName;
+            g["LastName"] = deserializedPerson.person.LastName;
+            g["MiddleName"] = deserializedPerson.person.MiddleName;
+
+            dtperson.Rows.Add(g);   
 
             var ds = new DataSet();
             ds.Tables.Add(dtperson);
@@ -85,21 +93,28 @@ namespace BioData.Pages.Bio
             return Content("file saved");
         }
 
-        private static DataTable GenerateDataTableFromClass<T>(string tablename,ref T data)
-        {
-            PropertyDescriptorCollection props =
-            TypeDescriptor.GetProperties(typeof(T));
-            DataTable dt = new DataTable(tablename);
-            foreach (PropertyDescriptor p in props)
-                dt.Columns.Add(p.Name, p.PropertyType);
+        //private byte[] GetPhoto()
+        //{
+        //    try
+        //    {
+        //        var _fb = new FacebookClient(Session["FbuserToken"].ToString());
+        //        dynamic resultMe = _fb.Get(GetProfileId() + "?fields=picture.width(480).height(480)");
 
-            foreach (var item in data as T)
-            {
+        //        WebClient webClient = new WebClient();
+        //        string urlPicture = resultMe.picture.data.url;
 
-            }
+        //        return webClient.DownloadData(urlPicture);
 
-            return dt;
-        }
+        //    }
+
+        //    catch (Exception)
+        //    {
+
+        //        return null;
+        //    }
+
+        //}
+
 
         private static DataTable GenerateDataTableFromClass<T>(string tablename)
         {

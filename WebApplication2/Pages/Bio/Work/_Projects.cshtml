@@ -1,23 +1,24 @@
-﻿<div class=" card card-body">
-    <div class="container">
-        <div class="alternating" v-for="(proj,ndex) in projects">
-            <div class="row">
-                <div class="form-group col-sm">
-                    <input class="form-control" type="text" v-model="proj.ProjectName" placeholder="ProjectName" />
-                </div>
-                <div class="form-group col-sm">
-                    <input class="form-control" type="text" v-model="proj.Organisation" placeholder="Organisation" />
-                </div>
+﻿<div class="container">
+    <div class="alternating card-body" v-for="(proj,ndex) in projects">
+        <hr />
+        <div class="row">
+            <div class="form-group col-sm">
+                <input class="form-control" type="text" v-model="proj.ProjectName" placeholder="ProjectName" />
             </div>
-            <div class="row">
-                <div class="form-group col-sm">
-                    <label class="control-label">Project Description</label>
-                    <textarea class="form-control" type="date" rows="7" v-model="proj.Description"></textarea>
-                </div>
+            <div class="form-group col-sm">
+                <input class="form-control" type="text" v-model="proj.Organisation" placeholder="Organisation" />
+            </div>
+            <div class="form-group col-sm">
+                <input class="form-control" type="text" v-model="proj.Year" placeholder="Year" />
             </div>
         </div>
-        <button class="btn btn-secondary" type="button" v-on:click="deleteEvent(projects,ndex)">Remove</button>
-        <hr />
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">Project Description</label>
+                <textarea class="form-control" type="date" rows="7" v-model="proj.Description"></textarea>
+            </div>
+        </div>
     </div>
-    <button class="btn" type="button" v-on:click="addProject">Add</button>
+    <button class="btn btn-secondary" type="button" v-on:click="deleteEvent(projects,ndex)">Remove</button>
 </div>
+<button class="btn" type="button" v-on:click="addProject">Add</button>

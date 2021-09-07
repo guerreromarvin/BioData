@@ -2,8 +2,8 @@
 @{
 }
 
-<div class=" card card-body">
-    <div class="container alternating" v-for="(edu,ndex) in education">
+<div class="card">
+    <div class="container alternating  card-body" v-for="(edu,ndex) in education">
         <div class="row ">
             <div class="form-group  col-sm-7">
                 <label class="control-label">Organisation</label>
@@ -18,7 +18,7 @@
             <div class="form-group col-sm">
                 <label class="control-label">Education Level</label>
 
-                <select v-model="edu.Location" class="form-select" aria-label="Education Level">
+                <select v-model="edu.Level" class="form-select" aria-label="Education Level">
                     <option selected>Level</option>
                     <option value="primary">Primary</option>
                     <option value="secondary">Secondary</option>

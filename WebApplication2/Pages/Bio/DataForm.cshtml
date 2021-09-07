@@ -58,12 +58,17 @@
          {'FirstName':''},
              ],
          projects:[{}],
+         skills:[{}],
          contacts:{}
        },
        methods:{
            addWorkHistoryLine : function(){
                $.notify("New Work Added.","success");
                this.workhistory.push({});
+           },
+           addSkill : function(){
+               $.notify("New Skill Added.","success");
+               this.skills.push({});
            },
            addEducationLine : function(){
                $.notify("New Education Added.","success");
@@ -134,7 +139,11 @@
               {
                 this.children = personJsonDetail.children;
               }
-
+               
+              if (personJsonDetail.skills)
+              {
+                this.skills = personJsonDetail.skills;
+              }
           }
        }
      })
@@ -150,8 +159,8 @@
 
 }
 
-<div class="row">
-    <div id="formVue" class="col-md-8 mb-5">
+<div class="container-lg">
+    <div id="formVue" class="">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UserId" />
@@ -181,6 +190,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="tabProfessional-tab" data-toggle="tab" href="#tabProfessional" role="tab" aria-controls="tabProfessional" aria-selected="false">Professional Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tabSkills-tab" data-toggle="tab" href="#tabSkills" role="tab" aria-controls="tabSkills" aria-selected="false">Skills</a>
                 </li>
             </ul>
             <div class="tab-content" id="inforTabContent">
@@ -212,6 +224,11 @@
                 <div class="tab-pane fade" id="tabProfessional" role="tabpanel" aria-labelledby="tabProfessional-tab">
                     <div id="divProfessional">
                         <partial name="Work/_Professional" />
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabSkills" role="tabpanel" aria-labelledby="tabSkills-tab">
+                    <div id="divSkills">
+                        <partial name="_Skills" />
                     </div>
                 </div>
             </div>

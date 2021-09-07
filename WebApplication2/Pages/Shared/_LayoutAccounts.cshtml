@@ -31,9 +31,21 @@
             </div>
         </nav>
     </header>
-    <div class="container-lg ">
+    <div class="container-lg">
         <main role="main" class="card-body">
-            @RenderBody()
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-10">
+                        <div class="align-content-lg-center">
+                            @RenderBody()
+                        </div>
+                    </div>
+                    <div class="col-1">
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 

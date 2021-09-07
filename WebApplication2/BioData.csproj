@@ -514,7 +514,6 @@
   <ItemGroup>
     <Folder Include="Data\MapProfile\" />
     <Folder Include="Reports\" />
-    <Folder Include="wwwroot\Reports\" />
   </ItemGroup>
 
 </Project>

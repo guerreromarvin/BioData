@@ -1,39 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-  <xs:annotation>
-    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-        <Connections />
-        <Tables />
-        <Sources />
-      </DataSource>
-    </xs:appinfo>
-  </xs:annotation>
-  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="NewDataSet" msprop:Generator_DataSetName="NewDataSet">
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Person" msprop:Generator_RowEvHandlerName="PersonRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonRowDeleted" msprop:Generator_RowDeletingName="PersonRowDeleting" msprop:Generator_RowEvArgName="PersonRowChangeEvent" msprop:Generator_TablePropName="Person" msprop:Generator_RowChangedName="PersonRowChanged" msprop:Generator_RowChangingName="PersonRowChanging" msprop:Generator_TableClassName="PersonDataTable" msprop:Generator_RowClassName="PersonRow" msprop:Generator_TableVarName="tablePerson" msprop:Generator_UserTableName="Person">
+        <xs:element name="person">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_UserColumnName="FirstName" type="xs:string" minOccurs="0" />
-              <xs:element name="MiddleName" msprop:Generator_ColumnPropNameInRow="MiddleName" msprop:Generator_ColumnPropNameInTable="MiddleNameColumn" msprop:Generator_ColumnVarNameInTable="columnMiddleName" msprop:Generator_UserColumnName="MiddleName" type="xs:string" minOccurs="0" />
-              <xs:element name="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_UserColumnName="LastName" type="xs:string" minOccurs="0" />
-              <xs:element name="Salutation" msprop:Generator_ColumnPropNameInRow="Salutation" msprop:Generator_ColumnPropNameInTable="SalutationColumn" msprop:Generator_ColumnVarNameInTable="columnSalutation" msprop:Generator_UserColumnName="Salutation" type="xs:string" minOccurs="0" />
-              <xs:element name="FathersName" msprop:Generator_ColumnPropNameInRow="FathersName" msprop:Generator_ColumnPropNameInTable="FathersNameColumn" msprop:Generator_ColumnVarNameInTable="columnFathersName" msprop:Generator_UserColumnName="FathersName" type="xs:string" minOccurs="0" />
-              <xs:element name="MothersName" msprop:Generator_ColumnPropNameInRow="MothersName" msprop:Generator_ColumnPropNameInTable="MothersNameColumn" msprop:Generator_ColumnVarNameInTable="columnMothersName" msprop:Generator_UserColumnName="MothersName" type="xs:string" minOccurs="0" />
-              <xs:element name="Suffix" msprop:Generator_ColumnPropNameInRow="Suffix" msprop:Generator_ColumnPropNameInTable="SuffixColumn" msprop:Generator_ColumnVarNameInTable="columnSuffix" msprop:Generator_UserColumnName="Suffix" type="xs:string" minOccurs="0" />
-              <xs:element name="Title" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_UserColumnName="Title" type="xs:string" minOccurs="0" />
-              <xs:element name="BirthPlace" msprop:Generator_ColumnPropNameInRow="BirthPlace" msprop:Generator_ColumnPropNameInTable="BirthPlaceColumn" msprop:Generator_ColumnVarNameInTable="columnBirthPlace" msprop:Generator_UserColumnName="BirthPlace" type="xs:string" minOccurs="0" />
-              <xs:element name="BirthDate" msprop:Generator_ColumnPropNameInRow="BirthDate" msprop:Generator_ColumnPropNameInTable="BirthDateColumn" msprop:Generator_ColumnVarNameInTable="columnBirthDate" msprop:Generator_UserColumnName="BirthDate" type="xs:string" minOccurs="0" />
-              <xs:element name="Gender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_UserColumnName="Gender" type="xs:string" minOccurs="0" />
-              <xs:element name="Spouse" msprop:Generator_ColumnPropNameInRow="Spouse" msprop:Generator_ColumnPropNameInTable="SpouseColumn" msprop:Generator_ColumnVarNameInTable="columnSpouse" msprop:Generator_UserColumnName="Spouse" type="xs:string" minOccurs="0" />
-              <xs:element name="Height" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_UserColumnName="Height" type="xs:string" minOccurs="0" />
-              <xs:element name="Weight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_UserColumnName="Weight" type="xs:string" minOccurs="0" />
-              <xs:element name="Religion" msprop:Generator_ColumnPropNameInRow="Religion" msprop:Generator_ColumnPropNameInTable="ReligionColumn" msprop:Generator_ColumnVarNameInTable="columnReligion" msprop:Generator_UserColumnName="Religion" type="xs:string" minOccurs="0" />
-              <xs:element name="Citizenship" msprop:Generator_ColumnPropNameInRow="Citizenship" msprop:Generator_ColumnPropNameInTable="CitizenshipColumn" msprop:Generator_ColumnVarNameInTable="columnCitizenship" msprop:Generator_UserColumnName="Citizenship" type="xs:string" minOccurs="0" />
-              <xs:element name="CivilStatus" msprop:Generator_ColumnPropNameInRow="CivilStatus" msprop:Generator_ColumnPropNameInTable="CivilStatusColumn" msprop:Generator_ColumnVarNameInTable="columnCivilStatus" msprop:Generator_UserColumnName="CivilStatus" type="xs:string" minOccurs="0" />
-              <xs:element name="Background" msprop:Generator_ColumnPropNameInRow="Background" msprop:Generator_ColumnPropNameInTable="BackgroundColumn" msprop:Generator_ColumnVarNameInTable="columnBackground" msprop:Generator_UserColumnName="Background" type="xs:string" minOccurs="0" />
-              <xs:element name="RolesAndResponsibilities" msprop:Generator_ColumnPropNameInRow="RolesAndResponsibilities" msprop:Generator_ColumnPropNameInTable="RolesAndResponsibilitiesColumn" msprop:Generator_ColumnVarNameInTable="columnRolesAndResponsibilities" msprop:Generator_UserColumnName="RolesAndResponsibilities" type="xs:string" minOccurs="0" />
+              <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="MiddleName" type="xs:string" minOccurs="0" />
+              <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              <xs:element name="Salutation" type="xs:string" minOccurs="0" />
+              <xs:element name="FathersName" type="xs:string" minOccurs="0" />
+              <xs:element name="MothersName" type="xs:string" minOccurs="0" />
+              <xs:element name="Suffix" type="xs:string" minOccurs="0" />
+              <xs:element name="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="BirthPlace" type="xs:string" minOccurs="0" />
+              <xs:element name="BirthDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Gender" type="xs:string" minOccurs="0" />
+              <xs:element name="Spouse" type="xs:string" minOccurs="0" />
+              <xs:element name="Height" type="xs:string" minOccurs="0" />
+              <xs:element name="Weight" type="xs:string" minOccurs="0" />
+              <xs:element name="Religion" type="xs:string" minOccurs="0" />
+              <xs:element name="Citizenship" type="xs:string" minOccurs="0" />
+              <xs:element name="CivilStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="Background" type="xs:string" minOccurs="0" />
+              <xs:element name="RolesAndResponsibilities" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="contacts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="education">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Institution" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="workhistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="School" type="xs:string" minOccurs="0" />
+              <xs:element name="Organisation" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthCompletedFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="YearCompletedFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="MonthCompletedTo" type="xs:string" minOccurs="0" />
+              <xs:element name="YearCompletedTo" type="xs:string" minOccurs="0" />
+              <xs:element name="RolesAndRespinsibilities" type="xs:string" minOccurs="0" />
+              <xs:element name="Position" type="xs:string" minOccurs="0" />
+              <xs:element name="Decription" type="xs:string" minOccurs="0" />
+              <xs:element name="RolesAndResponsibilities" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="project">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="ProjectName" type="xs:string" minOccurs="0" />
+              <xs:element name="Organisation" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="child">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              <xs:element name="MiddleName" type="xs:string" minOccurs="0" />
+              <xs:element name="Gender" type="xs:string" minOccurs="0" />
+              <xs:element name="BirthDate" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

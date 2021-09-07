@@ -2,8 +2,8 @@
 @{
 }
 
-<div class=" card card-body">
-    <div class="container">
+<div class="card">
+    <div class="container card-body">
         <div class="row">
             <h3>Personal Details</h3>
         </div>
@@ -96,6 +96,30 @@
                     <label class="control-label">Religion</label>
                     <input class="form-control" type="text" v-model="person.Religion" />
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">
+                    Achievements
+                </label>
+                <textarea class="form-control" type="date" rows="7" v-model="person.Achievements"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">
+                    Interests
+                </label>
+                <textarea class="form-control" type="date" rows="7" v-model="person.Interests"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm">
+                <label class="control-label">
+                    References
+                </label>
+                <textarea class="form-control" type="date" rows="7" v-model="person.References"></textarea>
             </div>
         </div>
         <hr />

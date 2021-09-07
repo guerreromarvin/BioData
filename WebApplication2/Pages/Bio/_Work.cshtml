@@ -2,8 +2,8 @@
 @{
 }
 
-<div class=" card card-body">
-    <div class="container alternating" v-for="(wrk,ndex) in workhistory">
+<div class="card">
+    <div class="container alternating card-body" v-for="(wrk,ndex) in workhistory">
         <div class="row g-3">
             <div class="form-group  col-sm-7">
                 <input class="form-control" v-bind:name="'wrk_' + ndex + '.Organisation'" type="text" v-model="wrk.Organisation" placeholder="Organisation" />
@@ -48,7 +48,7 @@
             </div>
         </div>
         <button class="btn btn-secondary" type="button" v-on:click="deleteEvent(workhistory,ndex)">Remove</button>
-        <hr />
+        <hr/>
     </div>
     <button class="btn" type="button" v-on:click="addWorkHistoryLine">Add</button>
 </div>
